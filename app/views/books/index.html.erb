@@ -1,3 +1,7 @@
+<div>
+  <%= flash[:notice] %>
+</div>
+
 <% if @book.errors.any? %>
   <%= pluralize(@book.errors.count, "error") %> prohibited this obj from being saved:
   <ul>
@@ -7,8 +11,9 @@
   </ul>
 <% end %>
 
-<%= render 'form', book: @book %>
 <%= render 'users/info', user: @user %>
+
+<%= render 'form', book: @book %>
 
 <h1>Books</h1>
 <table>
