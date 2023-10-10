@@ -6,8 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://kit.fontawesome.com/25fa200149.js" crossorigin="anonymous"></script>
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -24,7 +24,7 @@
               <% if user_signed_in? %>
                 <li class="nav-item text-light">
                   <%= link_to user_path(current_user.id), class: "nav-link text-light" do %>
-                    <i class="fa-solid fa-house"></i> Home
+                    <i class="fa-solid fa-home"></i> Home
                   <% end %>
                 </li>
                 <li class="nav-item">
@@ -39,13 +39,13 @@
                 </li>
                 <li class="nav-item">
                   <%= link_to destroy_user_session_path, method: :delete, class: "nav-link text-light" do %>
-                    <i class="fa-solid fa-right-from-bracket"></i> Log out
+                    <i class="fa-solid fa-sign-out-alt"></i> Log out
                   <% end %>
                 </li>
               <% else %>
                 <li class="nav-item">
                   <%= link_to root_path, class: "nav-link text-light" do %>
-                    <i class="fa-solid fa-house"></i> Home
+                    <i class="fa-solid fa-home"></i> Home
                   <% end %>
                 </li>
                 <li class="nav-item">
@@ -60,7 +60,7 @@
                 </li>
                 <li class="nav-item">
                   <%= link_to new_user_session_path, class: "nav-link text-light" do %>
-                    <i class="fa-solid fa-right-to-bracket"></i> Log in
+                    <i class="fa-solid fa-sign-in-alt"></i> Log in
                   <% end %>
                 </li>
               <% end %>
@@ -69,6 +69,7 @@
         </div>
       </nav>
     </header>
+
     <%= yield %>
 
     <footer class="text-center">
