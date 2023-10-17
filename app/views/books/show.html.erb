@@ -4,7 +4,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-3">
+    <div class="col-md-3">
       <div class="row">
         <%= render 'users/info', user: @user %>
       </div>
@@ -13,14 +13,16 @@
       </div>
     </div>
 
-    <div class="col-8 offset-1 mt-3">
+    <div class="col-md-8 offset-md-1 mt-3">
       <h2>Book detail</h2>
 
       <table class="table">
         <tr>
           <th style="width: 15%">
-            <%= image_tag @user.get_profile_image(100,100) %>
-            <p><%= link_to @book.user.name, user_path(@book.user_id), style:"font-weight: normal"%></p>
+            <%= link_to user_path(@user) do %>
+              <%= image_tag @user.get_profile_image(100,100) %>
+              <%= @book.user.name %>
+            <% end %>
           </th>
           <th style="width: 20%"><%= link_to @book.title, book_path(@book.id), style:"font-weight: normal"%></th>
           <td><%= @book.body %></td>
@@ -30,6 +32,8 @@
           <% end %>
         </tr>
       </table>
+      <%= render 'book_comments/index', book: @book %>
+      <%= render 'book_comments/form', book: @book, book_comment: @book_comment %>
     </div>
   </div>
 </div>
