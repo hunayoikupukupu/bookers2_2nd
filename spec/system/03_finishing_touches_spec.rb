@@ -385,7 +385,7 @@ describe '[STEP3] 仕上げのテスト' do
       end
 
       it 'Homeリンクのアイコンが表示される' do
-        is_expected.to have_selector '.fa-solid.fa-home, .fas.fa-home'
+        is_expected.to have_selector '.fa-solid.fa-house, .fa-solid.fa-home, .fas.fa-home'
       end
       it 'Aboutリンクのアイコンが表示される' do
         is_expected.to have_selector '.fa-solid.fa-link, .fas.fa-link'
@@ -394,7 +394,7 @@ describe '[STEP3] 仕上げのテスト' do
         is_expected.to have_selector '.fa-solid.fa-user-plus, .fas.fa-user-plus'
       end
       it 'Log inリンクのアイコンが表示される' do
-        is_expected.to have_selector '.fa-solid.fa-sign-in-alt, .fas.fa-sign-in-alt'
+        is_expected.to have_selector '.fa-solid.fa-right-to-bracket, .fa-solid.fa-sign-in-alt, .fas.fa-sign-in-alt'
       end
     end
 
@@ -409,7 +409,7 @@ describe '[STEP3] 仕上げのテスト' do
       end
 
       it 'Homeリンクのアイコンが表示される' do
-        is_expected.to have_selector '.fa-solid.fa-home, .fas.fa-home'
+        is_expected.to have_selector '.fa-solid.fa-house, .fa-solid.fa-home, .fas.fa-home'
       end
       it 'Usersリンクのアイコンが表示される' do
         is_expected.to have_selector '.fa-solid.fa-users, .fas.fa-users'
@@ -418,7 +418,7 @@ describe '[STEP3] 仕上げのテスト' do
         is_expected.to have_selector '.fa-solid.fa-book-open, .fas.fa-book-open'
       end
       it 'Log outリンクのアイコンが表示される' do
-        is_expected.to have_selector '.fa-solid.fa-sign-out-alt, .fas.fa-sign-out-alt'
+        is_expected.to have_selector '.fa-solid.fa-right-from-bracket, .fa-solid.fa-sign-out-alt, .fas.fa-sign-out-alt'
       end
     end
 
@@ -434,19 +434,19 @@ describe '[STEP3] 仕上げのテスト' do
 
       it 'ユーザ一覧画面でレンチアイコンが表示される' do
         visit users_path
-        is_expected.to have_selector '.fa-solid.fa-user-cog, .fas.fa-user-cog'
+        is_expected.to have_selector '.fa-solid.fa-user-gear, .fa-solid.fa-user-cog, .fas.fa-user-cog'
       end
       it 'ユーザ詳細画面でレンチアイコンが表示される' do
         visit user_path(user)
-        is_expected.to have_selector '.fa-solid.fa-user-cog, .fas.fa-user-cog'
+        is_expected.to have_selector '.fa-solid.fa-user-gear, .fa-solid.fa-user-cog, .fas.fa-user-cog'
       end
       it '投稿一覧画面でレンチアイコンが表示される' do
         visit books_path
-        is_expected.to have_selector '.fa-solid.fa-user-cog, .fas.fa-user-cog'
+        is_expected.to have_selector '.fa-solid.fa-user-gear, .fa-solid.fa-user-cog, .fas.fa-user-cog'
       end
       it '投稿詳細画面でレンチアイコンが表示される' do
         visit book_path(book)
-        is_expected.to have_selector '.fa-solid.fa-user-cog, .fas.fa-user-cog'
+        is_expected.to have_selector '.fa-solid.fa-user-gear, .fa-solid.fa-user-cog, .fas.fa-user-cog'
       end
     end
   end
